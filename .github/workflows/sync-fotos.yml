@@ -1,0 +1,32 @@
+name: Sincronizar fotos del Drive
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # cada 30 minutos
+  workflow_dispatch:
+  push:
+    paths: ["scripts/**", ".github/workflows/**"]
+
+permissions:
+  contents: write
+
+concurrency: sync-fotos
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow
+      - run: python scripts/sync_images.py
+      - name: Guardar cambios
+        run: |
+          git config user.name "coolstore-bot"
+          git config user.email "coolstore-bot@users.noreply.github.com"
+          git add img
+          if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
+          git commit -m "Fotos sincronizadas desde Drive"
+          git push
