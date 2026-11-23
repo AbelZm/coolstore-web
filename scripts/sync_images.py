@@ -4,12 +4,15 @@ Lee la lista de modelos del Apps Script (las mismas carpetas de tallas del Drive
 descarga cada foto, la reduce a 900 px y la guarda como img/<id>.jpg.
 Borra las fotos de modelos que ya no están en el Drive.
 """
-import io, json, os, sys, time, urllib.request
+import html, io, json, os, re, sys, time, urllib.request
 from PIL import Image
 
 STOCK_URL = "https://script.google.com/macros/s/AKfycbynBozJoRGqJQZwyVUyCVZz0vyK1KwE14T8w9Y2K9DDg4AVkgbRDkm6EJYmk2XY8cGFSQ/exec"
 EXTRA = ["1SPydGq9V_FtABuFqxiiSdlMXlm4eetuG", "1gSlDqzY0w4OIDex8spgNjOmcxupPVgqp"]  # fotos de "Clientes"
 OUT = "img"
+# Carpeta "SHORTS 2026" del Drive (subcarpetas por talla, compartidas con enlace)
+SHORTS = {"S": "1iOYbOlFW44bfWFv8jsffsnJEWQ_yOeck", "M": "1fCikBYjLRUJlp2sTBBI-TlmouVgONQl0",
+          "L": "1i0oJ-6RTzOc3upgocR32EQfkVFjaspMg", "XL": "1_3uegQEzsOX9ELX43f-MQtQ5Uoin7K5m"}
 UA = {"User-Agent": "Mozilla/5.0 coolstore-sync"}
 
 def get(url, tries=3):
@@ -34,9 +37,43 @@ def photo(fid):
             pass
     return None
 
+def folder(fid):
+    """Lista pública de una carpeta compartida con enlace: [(id, nombre)]."""
+    page = get(f"https://drive.google.com/embeddedfolderview?id={fid}#list")[0].decode("utf-8", "replace")
+    out = []
+    for m in re.finditer(r'id="entry-([\w-]+)".*?class="flip-entry-title">([^<]+)<', page, re.S):
+        out.append((m.group(1), html.unescape(m.group(2)).strip()))
+    return out
+
+def leer_shorts():
+    items = {}
+    for talla, fid in SHORTS.items():
+        for file_id, name in folder(fid):
+            if not re.search(r"\.(jpe?g|png|webp|heic)$", name, re.I):
+                continue
+            k = re.split(r"[-.]", name)[0]
+            it = items.setdefault(k, {"k": k, "id": file_id, "t": []})
+            if talla not in it["t"]:
+                it["t"].append(talla)
+    orden = ["S", "M", "L", "XL"]
+    for it in items.values():
+        it["t"].sort(key=orden.index)
+    return sorted(items.values(), key=lambda x: x["k"])
+
 def main():
     stock = json.loads(get(STOCK_URL + "?t=%d" % time.time())[0])
-    ids = sorted({v["id"] for v in stock["items"].values()} | set(EXTRA))
+    try:
+        sh = leer_shorts()
+        if sh:
+            nuevo = json.dumps({"items": sh}, ensure_ascii=False, indent=1)
+            viejo = open("shorts.json").read() if os.path.exists("shorts.json") else ""
+            if nuevo != viejo:
+                open("shorts.json", "w").write(nuevo)
+        print("shorts:", len(sh))
+    except Exception as e:
+        print("no se pudo leer shorts:", e)
+        sh = json.load(open("shorts.json"))["items"] if os.path.exists("shorts.json") else []
+    ids = sorted({v["id"] for v in stock["items"].values()} | set(EXTRA) | {x["id"] for x in sh})
     os.makedirs(OUT, exist_ok=True)
     nuevas = 0
     for fid in ids:

@@ -202,14 +202,20 @@ input,textarea{width:100%;font:16px Montserrat;padding:12px;border:1px solid #3a
 .proof figcaption{padding:14px 16px;color:#cfccc4;font-size:15px}
 .sync{font-size:12px;color:var(--gr);margin-top:10px}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.shome{background:#151515;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;padding:34px 0}
+.shin{display:grid;gap:24px;align-items:center}@media(min-width:860px){.shin{grid-template-columns:1fr 1.1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.chips span{border:1px solid #3a3a3a;border-radius:20px;padding:6px 12px;font-size:14px;color:#e9e6df}.chips b{color:var(--gd);margin-right:4px}.chips .hot{border-color:var(--gd)}
+.spics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.spics a{display:block;aspect-ratio:4/5;overflow:hidden;border-radius:10px;background:#222}.spics img{width:100%;height:100%;object-fit:cover}
+.stiers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:0 0 22px}@media(min-width:760px){.stiers{grid-template-columns:repeat(4,1fr)}}
+.stiers div{border:1px solid #333;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:2px}.stiers b{font-size:14px}.stiers span{font:700 24px Montserrat,sans-serif;color:var(--gd)}.stiers small{color:#9b988f;font-size:12px}.stiers .hot{border-color:var(--gd)}
 </style>
 </head>
 <body>
-<div class="top">3 polos por S/100 · Envíos a todo el Perú</div>
+<div class="top">3 polos por S/100 · Nuevos shorts desde S/50 · Envíos a todo el Perú</div>
 <header class="h"><div class="wrap hin">
   <a class="brand" href="#inicio" aria-label="COOL STORE, inicio"><img data-mono src="" alt="" width="38" height="44"><b>COOL<span>STORE</span></b></a>
   <nav class="m" id="nav">
-    <a href="#catalogo">Catálogo</a><a href="#promo">Promoción</a><a href="#mayoristas">Mayoristas</a><a href="#confeccion">Confección</a><a href="#clientes">Clientes</a><a href="#comprar">Cómo comprar</a><a href="#faq">Preguntas</a>
+    <a href="#catalogo">Catálogo</a><a href="#shorts">Shorts</a><a href="#promo">Promoción</a><a href="#mayoristas">Mayoristas</a><a href="#confeccion">Confección</a><a href="#clientes">Clientes</a><a href="#comprar">Cómo comprar</a><a href="#faq">Preguntas</a>
   </nav>
   <a class="btn wa hcta" data-wa="general" href="#">WhatsApp</a>
   <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">☰</button>
@@ -233,12 +239,23 @@ input,textarea{width:100%;font:16px Montserrat;padding:12px;border:1px solid #3a
   </div>
 </section>
 
+<section class="shome" aria-label="Nuevos shorts 2026"><div class="wrap shin">
+  <div>
+    <p class="rule">NUEVO · SHORTS 2026</p>
+    <h2 class="disp">Llegaron los <em>shorts</em></h2>
+    <p class="lead" style="margin:10px 0 0">Combínalos con tu polo favorito. Tallas S a XL.</p>
+    <div class="chips"><span><b>1</b> S/50</span><span><b>2</b> S/90</span><span><b>6</b> S/240</span><span class="hot"><b>Polo + short</b> S/80</span></div>
+    <div class="ctas" style="margin-top:18px"><a class="btn gold" href="#shorts">Ver los shorts</a><a class="btn line" data-wa="shorts" href="#">Preguntar por WhatsApp</a></div>
+  </div>
+  <div class="spics" id="shome"></div>
+</div></section>
+
 <section class="promo band" id="promo"><div class="wrap pgrid">
   <div>
     <p class="rule">PROMOCIÓN VIGENTE</p>
     <h2 class="disp">Arma tu trío</h2>
     <div class="price"><b>3 × S/100</b><span>envíos a todo el Perú</span></div>
-    <p class="math">Precio regular S/45 por polo: tres a precio regular suman S/135. Con la promo ahorras S/35 y no pagas envío.</p>
+    <p class="math">Precio regular S/45 por polo: tres a precio regular suman S/135. Con la promo ahorras S/35.</p>
   </div>
   <div class="ctas">
     <a class="btn gold" href="#catalogo">Elegir mis 3 polos</a>
@@ -267,6 +284,20 @@ input,textarea{width:100%;font:16px Montserrat;padding:12px;border:1px solid #3a
     <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 16l5 5 11-11"/><rect x="4" y="4" width="24" height="24" rx="3"/></svg><h3>Control de calidad</h3><p>Cada prenda pasa por un control exhaustivo antes de salir a tu pedido.</p></div>
     <div><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 8h20M6 24h20M10 4v8M22 20v8"/></svg><h3>Fit Loose y Semi-Oversize</h3><p>Cortes holgados que caen bien y se ven actuales, para usar todos los días.</p></div>
   </div>
+</div></section>
+
+<section class="band" id="shorts"><div class="wrap">
+  <div class="head">
+    <div><p class="rule">SHORTS 2026</p><h2 class="disp">Shorts</h2></div>
+    <p class="lead" style="margin:0;max-width:44ch">Cada short muestra solo las tallas que tenemos en stock. Elige tu talla y agrégalo a tu pedido junto con tus polos.</p>
+  </div>
+  <div class="stiers">
+    <div><b>1 short</b><span>S/50</span></div>
+    <div><b>2 shorts</b><span>S/90</span><small>S/45 c/u</small></div>
+    <div><b>6 shorts</b><span>S/240</span><small>S/40 c/u</small></div>
+    <div class="hot"><b>Polo + short</b><span>S/80</span><small>El combo se aplica solo en tu pedido</small></div>
+  </div>
+  <div class="grid" id="scat"></div>
 </div></section>
 
 <section class="light band" id="catalogo"><div class="wrap">
@@ -399,9 +430,13 @@ const CFG = {
   metaPixel: "",        // ej. "1234567890" → vacío = no activo
   tiktokPixel: "",      // ej. "CXXXXXXX"   → vacío = no activo
   stockUrl: "https://script.google.com/macros/s/AKfycbynBozJoRGqJQZwyVUyCVZz0vyK1KwE14T8w9Y2K9DDg4AVkgbRDkm6EJYmk2XY8cGFSQ/exec", // programa de Google que lee las carpetas de tallas en Drive
-  tiers: [[12,315],[24,600],[50,1200],[100,2300],[200,4400]]
+  tiers: [[12,315],[24,600],[50,1200],[100,2300],[200,4400]],
+  shorts: {one:50, packs:[[6,240],[2,90]], combo:80}  // 1 S/50 · 2 S/90 · 6 S/240 · polo + short S/80
 };
 let P = [{"n":1,"ref":"0543","id":"1APWsi8QCz90ilQidRmBK3YliTRvzcQnL","t":["S","M","L","XL"],"k":"0543A8CC"},{"n":2,"ref":"06EF","id":"1T9trKcfhbh1Nrm_VsbyXhU9vj37Ba6x4","t":["S","M","L","XL"],"k":"06EF213C"},{"n":3,"ref":"17FE","id":"1yB-tuSiZ5m3xmIY7zww4dEfqDko9LF4q","t":["S","M","L","XL"],"k":"17FED60D"},{"n":4,"ref":"18DA","id":"16W8VxgbKHcwgDWrZKG6_vy7kg_8kqTV_","t":["S","M","L","XL"],"k":"18DA0154"},{"n":5,"ref":"1FD1","id":"12mHNXmrAncQ6TyArHJBcGp4iWw2yRabF","t":["S","M","L","XL"],"k":"1FD102C3"},{"n":6,"ref":"223F","id":"1nT6YbJbNsoJEP9HA27YdEh5I4b8ud0TW","t":["S","M","L","XL"],"k":"223F790B"},{"n":7,"ref":"3580","id":"1_bpuOVixACB3bX_-B3XKkOcYjxXCnkMd","t":["S","M","L","XL"],"k":"35800BBB"},{"n":8,"ref":"4F01","id":"1zDlumRagIRWamHj7Qb56uLcDYx4vqWv4","t":["S","M","L","XL"],"k":"4F01C7ED"},{"n":9,"ref":"4F34","id":"11VEUtOKdwhcQ8bYCHbRkYAnhvB4c7cnq","t":["S","M","L","XL"],"k":"4F34E3FB"},{"n":10,"ref":"5445","id":"1Uq4zhJRpvauIvd_RTrOT2B3KFcDW-IfC","t":["S","M","L","XL"],"k":"5445783A"},{"n":11,"ref":"544F","id":"1BHYV0q8kzA4BkKhCvoEq5WLejTVBZ-nH","t":["S","M","L","XL"],"k":"544FC5F8"},{"n":12,"ref":"655D","id":"1FwdnyIjFzWn6Q7cdQ0uisUZ9mL24AIEC","t":["S","M","L","XL"],"k":"655D02FD"},{"n":13,"ref":"6A5F","id":"1xvIRByxBXDeV4cJu_AMcqHDkMOiMifcE","t":["S","M","L","XL"],"k":"6A5FE4DE"},{"n":14,"ref":"7247","id":"1V0adAJ-EBmHLZkBbpJS0vidFCiKp2sfq","t":["S","M","L","XL"],"k":"7247006E"},{"n":15,"ref":"7EE6","id":"1DcqBvMYPyiixsOoTHAvm-zoCjQmeAc2F","t":["S","M","L","XL"],"k":"7EE6CB7A"},{"n":16,"ref":"8148","id":"1AXgT0vn3ZhmdfZPb0j7Fe5UUb8YO0Y2d","t":["S","M","L","XL"],"k":"8148BB16"},{"n":17,"ref":"8C0F","id":"1epEJduLUDstIEO4GYYKRPoN7D37pGgNc","t":["S","M","L","XL"],"k":"8C0FC564"},{"n":18,"ref":"93E8","id":"1ovToHx3Z-LCBlVCGOyIHjav5SD0lPY9X","t":["S","M","L","XL"],"k":"93E802AF"},{"n":19,"ref":"94C2","id":"1PCz7cvgYlmPY3DUKwI--lZDBr2bLZjCw","t":["S","M","L","XL"],"k":"94C2263E"},{"n":20,"ref":"9650","id":"1US4b7fBXNvV9eUBCGMlRP45ECw3usuCM","t":["S","M","L","XL"],"k":"965072A1"},{"n":21,"ref":"9A23","id":"1vB1wkZ3Jaq5pnorwhsS_ga05K2gVVkCM","t":["S","M","L","XL"],"k":"9A23F1D2"},{"n":22,"ref":"9D29","id":"1g1l1c3Z1QPscRUftNJURNxnquZnY6qx6","t":["S","M","L","XL"],"k":"9D29878C"},{"n":23,"ref":"9F68","id":"1jyRcAv34rrdCaukgH4JOIEZwRpgDMYQl","t":["S","M","L","XL"],"k":"9F68B043"},{"n":24,"ref":"A4A0","id":"1428n5hH3o4hlTYGiM6twqsr07ORnyhKD","t":["S","M","L","XL"],"k":"A4A04956"},{"n":25,"ref":"A8F0","id":"1xAvSOp4m2WUtJaJq9oHwxZxIKJRv5yoJ","t":["S","M","L","XL"],"k":"A8F054E5"},{"n":26,"ref":"B407","id":"1rAVw2sJF3baA2L82t88vvnVVSHdMq_8-","t":["S","M","L","XL"],"k":"B4075955"},{"n":27,"ref":"B657","id":"1S9s3C4vWGxqSAwyZkMIVt3a_QhsCJq3u","t":["S","M","L","XL"],"k":"B657C440"},{"n":28,"ref":"C00A","id":"1ZUxI5bKUt9j5EThL1Mi97nUYeyZoh21H","t":["S","M","L","XL"],"k":"C00A15D5"},{"n":29,"ref":"C1C3","id":"1G5Q_O4jCeJtpIB5893Oi5cYu-2qW2Im2","t":["S","M","L","XL"],"k":"C1C38236"},{"n":30,"ref":"C1E2","id":"10iOj7vlJMUnb7uxeFkljDrRwV9I2vV1D","t":["S","M","L","XL"],"k":"C1E24F7D"},{"n":31,"ref":"C50B","id":"1DfbqqPz1fjXXWFxb7BqXRcQv7fvIJVzI","t":["S","M","L","XL"],"k":"C50B2DCE"},{"n":32,"ref":"C5A0","id":"1iDiQqtKwbd5qwBAg_YCuLbe4t2ZdKwwg","t":["S","M","L","XL"],"k":"C5A03E6E"},{"n":33,"ref":"C923","id":"1TAooLn_9CybWLll2iEPw-oqUh56hjX6P","t":["S","M","L","XL"],"k":"C9239169"},{"n":34,"ref":"CF0A","id":"1_luAsw3QjPpp8JH7wNSGZYeL0aXO6I_l","t":["S","M","L","XL"],"k":"CF0A6AC2"},{"n":35,"ref":"CF6C","id":"1xVXcin6-SrqA-PzaAnSa4ESNGJtP1Vb9","t":["S","M","L","XL"],"k":"CF6C5B89"},{"n":36,"ref":"D175","id":"1vqo8TLyFocvlNwJDbb85Jo8ZIZoDL6ej","t":["S","M","L","XL"],"k":"D17507C7"},{"n":37,"ref":"D676","id":"1-R2IblKAchZ4DiTMJzHUy3ehQrQMJEqU","t":["S","M","L","XL"],"k":"D676849E"},{"n":38,"ref":"D6C0","id":"1Ei8pa3_KxPiKCxtoEonKOaV2g2n_n6TF","t":["S","M","L","XL"],"k":"D6C03732"},{"n":39,"ref":"D76B","id":"1cj7xxqerF1a0wQGX2MyI2Z3ChEHd_d4U","t":["S","M","L","XL"],"k":"D76B5156"},{"n":40,"ref":"DCA1","id":"14xpXzygRZAwMV4gD-eTI0u61hMIcD1ec","t":["S","M","L","XL"],"k":"DCA1CC7B"},{"n":41,"ref":"E37F","id":"1WnviK4Ul0HHPU6mxfBA0F43q1vN084tW","t":["S","M","L","XL"],"k":"E37F60E5"},{"n":42,"ref":"EC3D","id":"1sq2R-7QnJwMOqzbCGYFqGcDPXcCVpGOv","t":["S","M","L","XL"],"k":"EC3D0461"},{"n":43,"ref":"F6E9","id":"1kJzVo36dD2F_YGB3XyPfRO1BPttmgoM2","t":["S","M","L","XL"],"k":"F6E91A5D"},{"n":44,"ref":"FE36","id":"1sYP8R-ue6ms8W4H_GCRKsGtx1aTnyFbr","t":["S","M","L","XL"],"k":"FE36C0D5"},{"n":45,"ref":"IMG1602","id":"1j3UNDqBoSiI0JSLMGPYjuaojBcXarG8v","t":["S","M","L","XL"],"k":"IMG_1602"},{"n":46,"ref":"IMG1604","id":"1wA7YYx-Fdl2l59jfYER2lhaG4y7z3Xb0","t":["S","M","L","XL"],"k":"IMG_1604"},{"n":47,"ref":"IMG1605","id":"1qHZOTXgltFSMBA0kayBbxSYIovptLL4j","t":["S","M","L","XL"],"k":"IMG_1605"},{"n":48,"ref":"IMG1606","id":"1dBylTDZ7AqTtzliXfYqZDc9_B977BWDx","t":["S","M","L","XL"],"k":"IMG_1606"},{"n":49,"ref":"2565","id":"1MvND3QomBie33jYqrM5i-Zpc2-ldiYJh","t":["S","M","L"],"k":"25659FC2"},{"n":50,"ref":"4079","id":"1v01T40I7d_u3bJZBHvVOkpXEPjZCcfRl","t":["S","M","L"],"k":"4079AAEF"},{"n":51,"ref":"4F05","id":"1I4ziw5Faq7WIg2wBtqwicZu9TXGiEX3P","t":["M","L","XL"],"k":"4F055E0D"},{"n":52,"ref":"5C34","id":"1h9GGtzVW-5K7c07YQkjtxGlGYoBns597","t":["S","L","XL"],"k":"5C34CA33"},{"n":53,"ref":"63E8","id":"1i1dA5771O_LuRAbT5oJ0DDyTuhuSDxcF","t":["S","M","XL"],"k":"63E8677C"},{"n":54,"ref":"6DAE","id":"1e3C0EeyTd2w_TvKWZVkTqABq2vXUL9sc","t":["S","M","L"],"k":"6DAE4FC3"},{"n":55,"ref":"749D","id":"1ybj0LcYG1ni1aNcvHSxIB1CFX5owONla","t":["S","L","XL"],"k":"749D508F"},{"n":56,"ref":"7583","id":"1gFyOG-hT4Izez-PEdsj8O_CUNVprPTJd","t":["M","L","XL"],"k":"75836B9E"},{"n":57,"ref":"802B","id":"1IzZjnYsmsUZKZz9nfvM8dytOoFF94M8b","t":["M","L","XL"],"k":"802B28F3"},{"n":58,"ref":"877E","id":"1HkL-ejeKc76BTErluCZEpjNJNtdfZUGC","t":["S","M","XL"],"k":"877ED2BF"},{"n":59,"ref":"8B3C","id":"1gXMEyTMF6IMSFWp7jEtMgFzrZEn9x2wL","t":["S","M","XL"],"k":"8B3CA80E"},{"n":60,"ref":"8EB7","id":"13Jxb-IIIiuMMNWWuT0v7t6hxP3EFKLqm","t":["S","M","XL"],"k":"8EB75D83"},{"n":61,"ref":"ACE6","id":"1Sh1Yi-5Vo1u6zXPHibqcM3D02Fwlt5Eb","t":["S","L","XL"],"k":"ACE65276"},{"n":62,"ref":"BB77","id":"1UIPV7Am8WYWHDpbhSguuEqyqKbVGWiOU","t":["S","L","XL"],"k":"BB7711C9"},{"n":63,"ref":"C226","id":"1KC-rPoLoYE6ck6nXwm8WfKK8C4EhKDDY","t":["S","L","XL"],"k":"C226DB88"},{"n":64,"ref":"C6DA","id":"11J35LxBWGt-3jXbSQ-UNl5g5lZ89wq6R","t":["M","L","XL"],"k":"C6DABD8F"},{"n":65,"ref":"F057","id":"1Qs3ikh3ZjiHNIXsAt30HCrt6_xqWtoux","t":["S","L","XL"],"k":"F0574A7D"},{"n":66,"ref":"F43E","id":"1swei-Je0YMmIilZ2BCi6jposlenro8GS","t":["S","L","XL"],"k":"F43E8FA4"},{"n":67,"ref":"IMG1607","id":"11i3HzbT9SO1sSJQdjDNCbVCsLFBcgIqH","t":["S","M","L"],"k":"IMG_1607"},{"n":68,"ref":"0931","id":"14NaVqabG-GS-XsT2AteBJAnQA7_MAX7I","t":["M","XL"],"k":"093166A3"},{"n":69,"ref":"0E92","id":"1zso4vDY201k2bZywNYAL5oTEvW_WqVsX","t":["S","M"],"k":"0E927EC7"},{"n":70,"ref":"0F32","id":"1L3dULGXopl_WGI-p2PMGMDcpFjcvfVEA","t":["M","L"],"k":"0F32B09D"},{"n":71,"ref":"264A","id":"1uphYY09lLlToXqLmMOmwZtw7KwXgxuq3","t":["L","XL"],"k":"264A45E8"},{"n":72,"ref":"2F34","id":"1q2U7_zh0Ggs_KdLZkVPjdd9kZqcBOBf7","t":["S","XL"],"k":"2F34B93B"},{"n":73,"ref":"3696","id":"1SH2l6hwB5QPMW9nT0NDW10Gg2AjGm-jJ","t":["S","XL"],"k":"3696BE37"},{"n":74,"ref":"3AAB","id":"15BDOZipvppQwq7dS6sGfm7AxbOJh285Z","t":["M","XL"],"k":"3AABED61"},{"n":75,"ref":"6E82","id":"11Oxp4HAHnj5PYx9wpj_49fXU41vBkXw1","t":["M","XL"],"k":"6E824A42"},{"n":76,"ref":"AA9A","id":"12sMEr9umDc3ZQe2tfIza2iz_aikcxlZ2","t":["S","XL"],"k":"AA9A8696"},{"n":77,"ref":"AB91","id":"1EibZaNn83iOydlihBEGWI2WSOupruxk8","t":["S","L"],"k":"AB91D201"},{"n":78,"ref":"AF26","id":"13swm7ExCtIiHKtJv3jLiExxhRKxIMAMp","t":["L","XL"],"k":"AF267804"},{"n":79,"ref":"B778","id":"1Ibczh776kCu-a3FmOvZGyCVg0ysn50zC","t":["M","XL"],"k":"B7789DD7"},{"n":80,"ref":"C76A","id":"1U0y-dWclUh8sCujM5MCevh1086QVhocb","t":["L","XL"],"k":"C76A51C8"},{"n":81,"ref":"D065","id":"1H9IVcJbXQKAqbjNxgvfvUubiixeoGcxG","t":["L","XL"],"k":"D0656A75"},{"n":82,"ref":"DC1A","id":"1aoLbibTkYuQAQVMkj77aiEgj5iwZYmNS","t":["M","XL"],"k":"DC1AD6EC"},{"n":83,"ref":"E80E","id":"1jDcnhMBPheBi-ZwTEatZ1d_999vFl8C0","t":["M","XL"],"k":"E80EF70E"},{"n":84,"ref":"0322","id":"1PMnhz1qEGO7xZTcIFhXTVyPXZ9auigkK","t":["L"],"k":"0322A4BF"},{"n":85,"ref":"2158","id":"1fb71W9l8TvO4tSzqsWRT1OqgmVBP6FXC","t":["M"],"k":"2158CBFC"},{"n":86,"ref":"2CDB","id":"1VjPKkOiGD2FyyNUIZOtW6rooBZDUQmvp","t":["XL"],"k":"2CDB35EF"},{"n":87,"ref":"36F4","id":"1yMqC9wSXT_8nullIc6TYoMLn-Gy0dIzN","t":["XL"],"k":"36F4B231"},{"n":88,"ref":"3E4F","id":"1gPoQGQRnMCo08VdWWbcm6xyzE6cWVQQU","t":["M"],"k":"3E4F12D9"},{"n":89,"ref":"46E0","id":"1uwHyeMfL-C4WFnTyfbDjtdXXdiyyS6_D","t":["XL"],"k":"46E0EA4E"},{"n":90,"ref":"68D0","id":"15NV8ZZ5u3wzfwQc96AGEEeq3UXeBiHDc","t":["XL"],"k":"68D00F9E"},{"n":91,"ref":"838D","id":"1Kz5Rpv486oZxT8LFpjgL538bQZDspzaV","t":["L"],"k":"838DB8D6"},{"n":92,"ref":"AF75","id":"1QCzi-KEgyyr4fzXiE22mJyZFWAU23omh","t":["XL"],"k":"AF75CFE4"},{"n":93,"ref":"B0E5","id":"1s0Cl2rvW9XyRzOHxtxPjEkFnYKCnY-yt","t":["XL"],"k":"B0E5FDC5"},{"n":94,"ref":"BE0E","id":"1zP3I1NWwEpgBFxlQeY6OcWgv-QbR6qlL","t":["XL"],"k":"BE0E2810"},{"n":95,"ref":"IMG1603","id":"1hgM8NYtnAgDLddmTsqsfYeO2uL7vi0gv","t":["XL"],"k":"IMG_1603"}];
+let SH = [{"n":1,"k":"IMG_2097","ref":"IMG2097","id":"1fT0-RC79Q7qChqiNevNfGf_C2FZfUsxX","t":["S","M","L"]},{"n":2,"k":"IMG_2098","ref":"IMG2098","id":"16q6BTCMy1CBIfxYznrbRrkUl7a9Oxt2t","t":["S","M","L"]},{"n":3,"k":"IMG_2099","ref":"IMG2099","id":"1T07gMoyAK_UrCgFZXdpc-Ii7vu1r_bht","t":["S","M","L","XL"]},{"n":4,"k":"IMG_2100","ref":"IMG2100","id":"1GpfulcjR2g_j5vEKQwEbFQjBCLY_c1IL","t":["S","M","L"]},{"n":5,"k":"IMG_2101","ref":"IMG2101","id":"1cMBgk0BSpfSG1W8R0H7000E8Hl2pcXlG","t":["M","L","XL"]}];   // shorts: carpeta "SHORTS 2026" del Drive
+const hm=n=>"Short "+String(n).padStart(2,"0");
+const byH=n=>SH.find(p=>p.n===n);
 const SIZES=["S","M","L","XL"];
 const th=(id,w)=>`img/${id}.jpg`;
 const drv=(id,w)=>`https://drive.google.com/thumbnail?id=${id}&sz=w${w}`;
@@ -441,6 +476,8 @@ const MSG={
   gramaje:()=>`Hola, vengo de la web de COOL STORE${ORI()}. Quiero cotizar prendas en algodón 100% 24/1 o 30/1.`,
   tier:q=>q?`Hola, vengo de la web de COOL STORE${ORI()}. Quiero el paquete mayorista de ${q} polos.`:`Hola, vengo de la web de COOL STORE${ORI()}. Quiero comprar más de 200 polos, ¿me pasan su mejor precio?`,
   catalogo:()=>`Hola, vengo de la web de COOL STORE${ORI()}. ¿Me pueden enviar el catálogo completo con stock por talla?`,
+  shorts:()=>`Hola, vengo de la web de COOL STORE${ORI()} y quiero información de los shorts 2026.`,
+  short:(p,s)=>`Hola, vengo de la web de COOL STORE${ORI()} y quiero consultar por este short: ${hm(p.n)} (Ref. ${p.ref})${s?`, talla ${s}`:""}. ¿Está disponible?`,
   model:(p,s)=>`Hola, vengo de la web de COOL STORE${ORI()} y quiero consultar por este modelo: ${nm(p.n)} (Ref. ${p.ref})${s?`, talla ${s}`:""}. ¿Está disponible?`
 };
 const waURL=t=>`https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent(t)}`;
@@ -483,6 +520,28 @@ function card(p){const s=pick[p.n];return `
     <button class="ask" data-ask="${p.n}" aria-label="Consultar ${nm(p.n)} por WhatsApp"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg></button></div>
   </div>
 </article>`}
+const hpick={};
+function hcard(p){const s=hpick[p.n];return `
+<article class="card">
+  <button class="ph" data-hview="${p.n}" aria-label="Ver ${hm(p.n)} en grande">
+    <img loading="lazy" data-id="${p.id}" data-w="500" src="${th(p.id,500)}" alt="${hm(p.n)}, short COOL STORE">
+    <span class="badge">${p.t.join(" · ")}</span>
+  </button>
+  <div class="cb">
+    <div class="cn">${hm(p.n)}<span class="cp">S/${CFG.shorts.one}</span></div>
+    <div class="cn" style="margin-top:-6px"><small>Ref. ${p.ref}</small></div>
+    <div class="avail${p.t.length<4?" lim":""}">${p.t.length===4?"Todas las tallas":"Solo talla"+(p.t.length>1?"s ":" ")+p.t.join(", ")}</div>
+    <div class="szs">${p.t.map(z=>`<button class="sz" data-hn="${p.n}" data-s="${z}" aria-pressed="${s===z}" aria-label="Talla ${z}">${z}</button>`).join("")}</div>
+    <div class="cact"><button class="add" data-hadd="${p.n}" ${s?"":"disabled"}>${s?"Agregar talla "+s:"Elige tu talla"}</button>
+    <button class="ask" data-hask="${p.n}" aria-label="Consultar ${hm(p.n)} por WhatsApp"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg></button></div>
+  </div>
+</article>`}
+function renderShorts(){
+  const sec=$("#shorts"),home=document.querySelector(".shome");
+  sec.style.display=home.style.display=SH.length?"":"none";
+  $("#scat").innerHTML=SH.map(hcard).join("");wire($("#scat"));
+  $("#shome").innerHTML=SH.slice(0,3).map(p=>`<a href="#shorts" aria-label="${hm(p.n)}"><img loading="lazy" data-id="${p.id}" data-w="400" src="${th(p.id,400)}" alt="${hm(p.n)}"></a>`).join("");wire($("#shome"));
+}
 let filter="all",shown=96;
 function renderFeat(){$("#feat").innerHTML=full.slice(0,8).map(card).join("");wire($("#feat"))}
 function renderCat(){
@@ -491,33 +550,46 @@ function renderCat(){
   $("#more").style.display=list.length>shown?"":"none";
   $("#more").textContent=`Ver más modelos (${list.length-shown})`;
 }
-function rerender(){renderFeat();renderCat();if($("#ovView").classList.contains("on"))openView(+$("#pv").dataset.n)}
+function rerender(){renderFeat();renderCat();renderShorts();if($("#ovView").classList.contains("on")){const v=$("#pv");v.dataset.h?openHView(+v.dataset.n):openView(+v.dataset.n)}}
 $("#filters").addEventListener("click",e=>{const b=e.target.closest(".f");if(!b)return;filter=b.dataset.f;shown=96;
   document.querySelectorAll(".f").forEach(x=>x.setAttribute("aria-pressed",x===b));renderCat();track("filter_size",{size:filter})});
 $("#more").onclick=()=>{shown+=24;renderCat()};
 
 /* ===== Pedido ===== */
-let cart=[];try{cart=JSON.parse(localStorage.getItem("cs-cart")||"[]").filter(c=>byN(c.n))}catch(e){}
+const item=c=>c.h?byH(c.n):byN(c.n);
+const itName=c=>(c.h?hm:nm)(c.n);
+let cart=[];try{cart=JSON.parse(localStorage.getItem("cs-cart")||"[]").filter(item)}catch(e){}
 const save=()=>{try{localStorage.setItem("cs-cart",JSON.stringify(cart))}catch(e){}};
-function totals(){const q=cart.reduce((a,c)=>a+c.q,0),tr=Math.floor(q/CFG.promo.qty);
-  return {q,tr,sum:tr*CFG.promo.total+(q-tr*CFG.promo.qty)*CFG.price,reg:q*CFG.price}}
+const polos=q=>Math.floor(q/CFG.promo.qty)*CFG.promo.total+(q%CFG.promo.qty)*CFG.price;
+function shorts(q){const b=[0];for(let i=1;i<=q;i++){b[i]=b[i-1]+CFG.shorts.one;CFG.shorts.packs.forEach(([k,v])=>{if(i>=k)b[i]=Math.min(b[i],b[i-k]+v)})}return b[q]}
+function totals(){
+  const pq=cart.filter(c=>!c.h).reduce((a,c)=>a+c.q,0),hq=cart.filter(c=>c.h).reduce((a,c)=>a+c.q,0);
+  let best=polos(pq)+shorts(hq),cb=0;
+  for(let c=1;c<=Math.min(pq,hq);c++){const t=polos(pq-c)+shorts(hq-c)+c*CFG.shorts.combo;if(t<best){best=t;cb=c}}
+  return {q:pq+hq,pq,hq,cb,tr:Math.floor((pq-cb)/CFG.promo.qty),sum:best}}
 function cartUI(){
   const t=totals();$("#cc").textContent=t.q;$("#fcart").classList.toggle("on",t.q>0);
-  $("#items").innerHTML=cart.length?cart.map((c,i)=>{const p=byN(c.n);return `<div class="it"><img data-id="${p.id}" data-w="120" src="${th(p.id,120)}" alt=""><span><b>${nm(p.n)}</b> · Talla ${c.s}<br><small style="color:#8c8c8c">Ref. ${p.ref}</small></span><div class="q"><button data-dec="${i}" aria-label="Quitar uno">−</button><b>${c.q}</b><button data-inc="${i}" aria-label="Agregar uno">+</button></div></div>`}).join(""):'<p class="note">Aún no agregas polos.</p>';
+  $("#items").innerHTML=cart.length?cart.map((c,i)=>{const p=item(c);return `<div class="it"><img data-id="${p.id}" data-w="120" src="${th(p.id,120)}" alt=""><span><b>${itName(c)}</b> · Talla ${c.s}<br><small style="color:#8c8c8c">Ref. ${p.ref}</small></span><div class="q"><button data-dec="${i}" aria-label="Quitar uno">−</button><b>${c.q}</b><button data-inc="${i}" aria-label="Agregar uno">+</button></div></div>`}).join(""):'<p class="note">Aún no agregas productos.</p>';
   wire($("#items"));
-  const falta=t.q%CFG.promo.qty?CFG.promo.qty-t.q%CFG.promo.qty:0;
-  $("#tot").innerHTML=t.q?`<span>Total referencial<small>${t.tr?`${t.tr} trío(s) con promo · envío a coordinar`:"Precio regular · envío a coordinar"}${falta?` · agrega ${falta} más para otro trío`:""}</small></span><span>S/${t.sum}</span>`:"";
-  const lines=cart.map(c=>{const p=byN(c.n);return `• ${nm(p.n)} (Ref. ${p.ref}) – Talla ${c.s} x${c.q}`});
+  const rest=t.pq-t.cb,falta=rest%CFG.promo.qty?CFG.promo.qty-rest%CFG.promo.qty:0;
+  const det=[t.tr?`${t.tr} trío(s) de polos con promo`:"",t.cb?`${t.cb} combo(s) polo + short`:"",t.hq-t.cb>0?`${t.hq-t.cb} short(s)`:""].filter(Boolean).join(" · ")||"Precio regular";
+  $("#tot").innerHTML=t.q?`<span>Total referencial<small>${det} · envío a coordinar${rest&&falta?` · agrega ${falta} polo(s) más para otro trío`:""}</small></span><span>S/${t.sum}</span>`:"";
+  const lines=cart.map(c=>{const p=item(c);return `• ${itName(c)} (Ref. ${p.ref}) – Talla ${c.s} x${c.q}`});
   const n=$("#nom").value.trim(),d=$("#dest").value.trim();
-  $("#send").href=waURL(`Hola, vengo de la web de COOL STORE${ORI()} y quiero hacer este pedido:\n${lines.join("\n")}\n\nTotal referencial: S/${t.sum} (${t.q} polos)`+(n?`\nNombre: ${n}`:"")+(d?`\nEnvío a: ${d}`:""));
+  $("#send").href=waURL(`Hola, vengo de la web de COOL STORE${ORI()} y quiero hacer este pedido:\n${lines.join("\n")}\n\nTotal referencial: S/${t.sum} (${[t.pq?t.pq+" polo(s)":"",t.hq?t.hq+" short(s)":""].filter(Boolean).join(" + ")})`+(n?`\nNombre: ${n}`:"")+(d?`\nEnvío a: ${d}`:""));
   save();
 }
-function add(n){const s=pick[n];if(!s)return;const f=cart.find(c=>c.n===n&&c.s===s);f?f.q++:cart.push({n,s,q:1});
-  pick[n]=undefined;track("add_to_order",{model:nm(n),size:s});rerender();cartUI();
+function add(n,h){const pk=h?hpick:pick,s=pk[n];if(!s)return;const f=cart.find(c=>c.n===n&&c.s===s&&!c.h===!h);f?f.q++:cart.push(h?{n,s,q:1,h:1}:{n,s,q:1});
+  pk[n]=undefined;track("add_to_order",{model:(h?hm:nm)(n),size:s});rerender();cartUI();
   const b=$("#fcart");if(b.animate&&!matchMedia("(prefers-reduced-motion:reduce)").matches)b.animate([{transform:"scale(1)"},{transform:"scale(1.1)"},{transform:"scale(1)"}],{duration:320})}
 document.addEventListener("click",e=>{
   const z=e.target.closest(".sz"),a=e.target.closest("[data-add]"),q=e.target.closest("[data-ask]"),v=e.target.closest("[data-view]");
-  if(z){const n=+z.dataset.n;pick[n]=pick[n]===z.dataset.s?undefined:z.dataset.s;rerender()}
+  const ha=e.target.closest("[data-hadd]"),hq=e.target.closest("[data-hask]"),hv=e.target.closest("[data-hview]");
+  if(z&&z.dataset.hn){const n=+z.dataset.hn;hpick[n]=hpick[n]===z.dataset.s?undefined:z.dataset.s;rerender()}
+  else if(z){const n=+z.dataset.n;pick[n]=pick[n]===z.dataset.s?undefined:z.dataset.s;rerender()}
+  else if(ha)add(+ha.dataset.hadd,1);
+  else if(hq){const p=byH(+hq.dataset.hask);track("whatsapp_click",{type:"short",model:hm(p.n)});window.location.href=waURL(MSG.short(p,hpick[p.n]))}
+  else if(hv)openHView(+hv.dataset.hview);
   else if(a)add(+a.dataset.add);
   else if(q){const p=byN(+q.dataset.ask);track("whatsapp_click",{type:"model",model:nm(p.n)});window.location.href=waURL(MSG.model(p,pick[p.n]))}
   else if(v)openView(+v.dataset.view);
@@ -529,7 +601,15 @@ document.addEventListener("click",e=>{
 function openOv(id){$(id).classList.add("on");document.body.style.overflow="hidden";const x=$(id).querySelector(".x");x&&x.focus()}
 function closeOv(){document.querySelectorAll(".ov").forEach(o=>o.classList.remove("on"));document.body.style.overflow=""}
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeOv()});
-function openView(n){const p=byN(n);$("#tv").textContent=nm(n);$("#pv").dataset.n=n;
+function openHView(n){const p=byH(n);$("#tv").textContent=hm(n);$("#pv").dataset.n=n;$("#pv").dataset.h=1;
+  $("#pv").innerHTML=`<div class="ph" style="aspect-ratio:4/5"><img data-id="${p.id}" data-w="1000" src="${th(p.id,1000)}" alt="${hm(n)} ampliado"></div>
+  <div style="display:flex;flex-direction:column;gap:14px"><div><b style="font-size:22px">S/${CFG.shorts.one}</b><div class="note" style="margin:4px 0 0">2 por S/90 · 6 por S/240 · Polo + short S/80</div></div>
+  <div><div style="font-weight:600;font-size:14px;margin-bottom:8px">${p.t.length===4?"Disponible en todas las tallas":"Disponible solo en: "+p.t.join(", ")}</div><div class="szs">${p.t.map(z=>`<button class="sz" data-hn="${n}" data-s="${z}" aria-pressed="${hpick[n]===z}">${z}</button>`).join("")}</div></div>
+  <p style="margin:0;color:#bdbbb5;font-size:15px">Shorts COOL STORE 2026 · Ref. ${p.ref}</p>
+  <button class="btn gold full" data-hadd="${n}" ${hpick[n]?"":"disabled"}>${hpick[n]?"Agregar talla "+hpick[n]+" al pedido":"Elige tu talla"}</button>
+  <button class="btn line full" data-hask="${n}">Consultar este short por WhatsApp</button></div>`;
+  wire($("#pv"));if(!$("#ovView").classList.contains("on")){openOv("#ovView");track("view_model",{model:hm(n)})}}
+function openView(n){const p=byN(n);$("#tv").textContent=nm(n);$("#pv").dataset.n=n;delete $("#pv").dataset.h;
   $("#pv").innerHTML=`<div class="ph" style="aspect-ratio:4/5"><img data-id="${p.id}" data-w="1000" src="${th(p.id,1000)}" alt="${nm(n)} ampliado"></div>
   <div style="display:flex;flex-direction:column;gap:14px"><div><b style="font-size:22px">S/${CFG.price}</b><div class="note" style="margin:4px 0 0">o ${CFG.promo.label}</div></div>
   <div><div style="font-weight:600;font-size:14px;margin-bottom:8px">${p.t.length===4?"Disponible en todas las tallas":"Disponible solo en: "+p.t.join(", ")}</div><div class="szs">${p.t.map(z=>`<button class="sz" data-n="${n}" data-s="${z}" aria-pressed="${pick[n]===z}">${z}</button>`).join("")}</div></div>
@@ -543,7 +623,7 @@ $("#send").addEventListener("click",e=>{if(!cart.length){e.preventDefault();retu
 const bg=$("#burger"),nav=$("#nav");
 bg.onclick=()=>{const o=nav.classList.toggle("open");bg.setAttribute("aria-expanded",o)};
 nav.addEventListener("click",e=>{if(e.target.closest("a")){nav.classList.remove("open");bg.setAttribute("aria-expanded",false)}});
-renderFeat();renderCat();cartUI();
+renderFeat();renderCat();renderShorts();cartUI();
 
 /* ===== Sincronización con Google Drive =====
    Si borras o mueves una foto en las carpetas de tallas, la página se actualiza sola
@@ -561,12 +641,21 @@ async function syncDrive(){
     const np=keys.map(k=>{const o=it[k],old=known[k];return {n:old?old.n:++max,k,ref:k.startsWith("IMG")?k.replace("_",""):k.slice(0,4),id:old&&old.id&&o.t.length?(o.id):o.id,t:SZ.filter(z=>o.t.includes(z))}}).filter(p=>p.t.length);
     np.sort((a,b)=>(b.t.length===4)-(a.t.length===4)||a.n-b.n);
     P=np;
-    cart=cart.filter(c=>{const p=byN(c.n);return p&&p.t.includes(c.s)});
-    renderStatic();renderFeat();renderCat();cartUI();
+    cart=cart.filter(c=>{const p=item(c);return p&&p.t.includes(c.s)});
+    renderStatic();renderFeat();renderCat();renderShorts();cartUI();
     track("stock_sync",{models:P.length});
   }catch(e){}
 }
 syncDrive();
+
+/* Shorts: la lista se actualiza sola desde la carpeta "SHORTS 2026" del Drive (cada 30 min) */
+fetch("shorts.json?t="+Date.now()).then(r=>r.ok?r.json():null).then(d=>{
+  if(!d||!Array.isArray(d.items))return;
+  const known={};SH.forEach(p=>known[p.k]=p);let max=Math.max(0,...SH.map(p=>p.n));
+  SH=d.items.filter(o=>o.t&&o.t.length).map(o=>({n:known[o.k]?known[o.k].n:++max,k:o.k,ref:o.k.replace("_",""),id:o.id,t:["S","M","L","XL"].filter(z=>o.t.includes(z))})).sort((a,b)=>a.n-b.n);
+  cart=cart.filter(c=>{const p=item(c);return p&&p.t.includes(c.s)});
+  renderShorts();cartUI();
+}).catch(()=>{});
 }
 </script>
 </body>
